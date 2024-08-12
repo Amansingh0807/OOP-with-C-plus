@@ -14,11 +14,11 @@ int main() {
 
     // Declare a 2D array of strings with 5 rows and 3 columns to store student data
     string ar[5][3] = {
-        {"Aman Singh", "038", "to play chess"},  // First row
-        {"Aman Singh", "038", "to play chess"},  // Second row
-        {"Aman Singh", "038", "to play chess"},  // Third row
-        {"Aman Singh", "038", "to play chess"},  // Fourth row
-        {"Aman Singh", "038", "to play chess"}   // Fifth row
+        "Aman Singh", "038", "to play chess",  // First row
+        "Aman Singh", "038", "to play chess",  // Second row
+        "Aman Singh", "038", "to play chess",  // Third row
+        "Aman Singh", "038", "to play chess",  // Fourth row
+        "Aman Singh", "038", "to play chess"   // Fifth row
     };
 
     // Loop through the rows of the 2D array 'ar'
