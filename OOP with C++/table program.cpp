@@ -33,3 +33,71 @@ int main() {
     system("pause");  // Pause the console (only works on Windows)
     return 0;  // Return 0 to indicate successful execution of the program
 }
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int roll;
+    int marks[5];  // Array to store marks of 5 subjects
+
+public:
+    // Constructor to initialize the student's details
+    Student(string n, int r, int m[]) {
+        name = n;
+        roll = r;
+        for (int i = 0; i < 5; i++) {
+            marks[i] = m[i];
+        }
+    }
+
+    // Function to calculate the average marks
+    float calculateAverage() {
+        int sum = 0;
+        for (int i = 0; i < 5; i++) {
+            sum += marks[i];
+        }
+        return sum / 5.0;
+    }
+
+    // Function to assign stream based on average marks
+    string assignStream() {
+        float averageMarks = calculateAverage();
+
+        if (averageMarks >= 96) {
+            return "Computer Science";
+        } else if (averageMarks >= 91) {
+            return "Electronics";
+        } else if (averageMarks >= 86) {
+            return "Mechanical";
+        } else if (averageMarks >= 81) {
+            return "Electrical";
+        } else if (averageMarks >= 76) {
+            return "Chemical";
+        } else if (averageMarks >= 71) {
+            return "Civil";
+        } else {
+            return "No Stream Available";
+        }
+    }
+
+    // Function to display student's details and assigned stream
+    void displayStudentDetails() {
+        cout << "Student Name: " << name << endl;
+        cout << "Roll Number: " << roll << endl;
+        cout << "Average Marks: " << calculateAverage() << "%" << endl;
+        cout << "Assigned Stream: " << assignStream() << endl;
+    }
+};
+
+int main() {
+    int marks[] = {95, 98, 92, 96, 94};
+    Student student("John Doe", 12345, marks);
+    student.displayStudentDetails();
+    return 0;
+}
