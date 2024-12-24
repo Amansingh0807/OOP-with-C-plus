@@ -46,3 +46,45 @@ int main(){
 
     return 0;
 }
+
+
+//______________________________________________________________________________________________________________________________________________________________________
+
+//Another example of Multilevel inheritance 
+
+#include <iostream>
+using namespace std;
+
+// Base class
+class Vehicle {
+    public:
+    void start() {
+        cout << "Vehicle is starting." << endl;
+    }
+};
+
+// Derived class from Vehicle
+class Car : public Vehicle {
+    public:
+    void drive() {
+        cout << "Car is being driven." << endl;
+    }
+};
+
+// Further derived class from Car
+class ElectricCar : public Car {
+    public:
+    void charge() {
+        cout << "Electric car is charging." << endl;
+    }
+};
+
+int main() {
+    ElectricCar e1;
+
+    e1.start();           // From Vehicle class
+    e1.drive();           // From Car class
+    e1.charge();          // From ElectricCar class
+
+    return 0;
+}
